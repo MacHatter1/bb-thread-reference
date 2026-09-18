@@ -11,7 +11,7 @@ import {
   parseThreadReferenceMentionResource,
   parseThreadReferencePayload,
   serializeThreadReferencePayload,
-} from "./shared.js";
+} from "../src/shared.js";
 
 function fakeDataTransfer() {
   const values = new Map<string, string>();
@@ -90,7 +90,7 @@ describe("plugin app", () => {
     rowContainer.append(row);
     document.body.append(rowContainer);
 
-    const app = await loadPluginApp(() => import("./app"));
+    const app = await loadPluginApp(() => import("../src/app"));
     const mounted = await mountPluginContentScripts(app, {
       pluginId: "thread-reference",
     });
@@ -120,7 +120,7 @@ describe("plugin app", () => {
   });
 
   it("does not render a visible drop banner", async () => {
-    const app = await loadPluginApp(() => import("./app"));
+    const app = await loadPluginApp(() => import("../src/app"));
     const banner = app.composerCustomizations[0]?.banners?.[0];
     if (banner === undefined) throw new Error("composer bridge was not registered");
 
@@ -137,7 +137,7 @@ describe("plugin app", () => {
   });
 
   it("accepts a drop directly on the composer editor", async () => {
-    const app = await loadPluginApp(() => import("./app"));
+    const app = await loadPluginApp(() => import("../src/app"));
     const banner = app.composerCustomizations[0]?.banners?.[0];
     if (banner === undefined) throw new Error("composer bridge was not registered");
 
@@ -200,7 +200,7 @@ describe("plugin app", () => {
       .spyOn(HTMLAnchorElement.prototype, "click")
       .mockImplementation(() => undefined);
 
-    const app = await loadPluginApp(() => import("./app"));
+    const app = await loadPluginApp(() => import("../src/app"));
     const mounted = await mountPluginContentScripts(app, {
       pluginId: "thread-reference",
     });

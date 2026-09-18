@@ -1,11 +1,11 @@
 ---
 name: thread-reference
-description: Use Thread Reference when a BB chat needs context from another thread. Drag a sidebar thread into the target composer, or type @ and choose a thread from the Threads mention provider.
+description: Use BB Thread Reference when a BB chat needs context from another thread. Drag a sidebar thread into the target composer, or type @ and choose a thread from the Threads mention provider.
 ---
 
 # Thread references
 
-Thread Reference turns a sidebar thread into a composer mention. The
+BB Thread Reference turns a sidebar thread into a composer mention. The
 mention is resolved when the message is sent, so the agent receives current
 context from the referenced thread rather than a stale copy from drag time.
 

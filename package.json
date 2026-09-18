@@ -7,13 +7,13 @@
     "bbPluginSdk": ">=0.4.87"
   },
   "bb": {
-    "name": "Thread Reference",
+    "name": "BB Thread Reference",
     "description": "Drag any BB thread into a chat composer to reference its fresh context when you send.",
     "branding": {
       "icon": "MessageSquare"
     },
-    "server": "./server.ts",
-    "app": "./app.tsx",
+    "server": "./src/server.ts",
+    "app": "./src/app.tsx",
     "skills": [
       "skills"
     ]

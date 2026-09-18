@@ -12,19 +12,13 @@
     "types": [
       "node"
     ],
-    "paths": {
-      "@/*": [
-        "./*"
-      ]
-    },
     "noEmit": true,
     "skipLibCheck": false
   },
   "include": [
-    "server.ts",
-    "app.tsx",
-    "shared.ts",
-    "app.test.tsx",
-    "server.test.ts"
+    "src/**/*.ts",
+    "src/**/*.tsx",
+    "tests/**/*.ts",
+    "tests/**/*.tsx"
   ]
 }

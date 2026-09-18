@@ -3,7 +3,7 @@ import {
   createFakePluginHost,
   makeThreadResponse,
 } from "@get-bb/plugin-sdk/testing";
-import plugin from "./server.js";
+import plugin from "../src/server.js";
 
 let disposeCurrent: (() => Promise<void>) | undefined;
 

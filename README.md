@@ -1,9 +1,9 @@
-# Thread Reference
+# BB Thread Reference
 
-Thread Reference adds a small drag handle to each BB sidebar thread. Drag
+BB Thread Reference adds a small drag handle to each BB sidebar thread. Drag
 the handle directly into a chat input to add a thread reference.
 
-![Thread Reference demo: drag a thread into the composer and use it in a chat](assets/thread-reference-demo.gif)
+![BB Thread Reference demo: drag a thread into the composer and use it in a chat](assets/thread-reference-demo.gif)
 
 The demo shows the complete flow: drag a thread into the composer, send the
 message with the native reference mention, and receive a response grounded in
@@ -35,7 +35,7 @@ bb plugin reload thread-reference
 
 ## How it works
 
-- `app.tsx` registers a trusted content script that adds a dedicated drag
+- `src/app.tsx` registers a trusted content script that adds a dedicated drag
   handle to sidebar rows with `data-sidebar-thread-id`, handles drops on
   composer editors, and turns persisted thread mentions into links back to
   their source threads. BB's native row drag is temporarily disabled while
@@ -44,7 +44,7 @@ bb plugin reload thread-reference
 - The same frontend registers an invisible per-composer bridge. A drop on the
   actual input inserts a `thread-reference` mention and focuses the composer;
   no drop banner is rendered.
-- `server.ts` registers the **Threads** mention provider. Search uses BB's
+- `src/server.ts` registers the **Threads** mention provider. Search uses BB's
   thread index; resolution reads the source thread at send time and returns a
   bounded, prompt-injection-aware context block.
 - `skills/thread-reference/SKILL.md` documents the workflow for agents.
