@@ -5,7 +5,7 @@ requests are all welcome.
 
 ## Getting set up
 
-You need [BB](https://get-bb.com) 0.43 or newer and Node.js 22 or newer.
+You need [BB](https://getbb.app/) 0.43 or newer and Node.js 22 or newer.
 
 ```sh
 npm install

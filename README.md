@@ -1,7 +1,7 @@
 # BB Thread Reference
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
-[![BB plugin](https://img.shields.io/badge/BB-plugin-6f42c1)](https://get-bb.com)
+[![BB plugin](https://img.shields.io/badge/BB-plugin-6f42c1)](https://getbb.app/)
 
 BB Thread Reference adds a small drag handle to each BB sidebar thread. Drag
 the handle directly into a chat input to add a thread reference.
