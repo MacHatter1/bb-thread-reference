@@ -1,0 +1,48 @@
+name: Bug report
+description: Something in the plugin does not work as described.
+labels: ["bug"]
+body:
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: What you did, what you expected, and what happened instead.
+      placeholder: |
+        1. Dragged the grip handle on a sidebar thread into the composer
+        2. Expected a thread mention to appear
+        3. Nothing was inserted
+    validations:
+      required: true
+  - type: input
+    id: bb-version
+    attributes:
+      label: BB version
+      description: Run `bb --version`.
+      placeholder: "0.43.0"
+    validations:
+      required: true
+  - type: input
+    id: plugin-version
+    attributes:
+      label: Plugin version
+      description: Run `bb plugin list`, or give the commit you built from.
+      placeholder: "0.1.0"
+    validations:
+      required: true
+  - type: input
+    id: os
+    attributes:
+      label: Operating system
+      placeholder: "macOS 15.3"
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs
+      description: >
+        Anything relevant from the BB plugin logs or the developer console.
+        This is rendered as a code block, so no backticks are needed.
+      render: text
+    validations:
+      required: false
