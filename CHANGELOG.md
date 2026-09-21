@@ -11,7 +11,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - MIT license, contribution guide, security policy, and issue and pull request
   templates.
-- GitHub Actions CI running the typecheck and test suite on Node 22 and 24.
 
 ## [0.1.0] - 2026-09-18
 
