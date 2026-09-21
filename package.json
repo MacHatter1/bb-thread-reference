@@ -1,10 +1,31 @@
 {
   "name": "bb-plugin-thread-reference",
   "version": "0.1.0",
+  "description": "Drag any BB thread into a chat composer to reference its fresh context when you send.",
+  "license": "MIT",
+  "author": "MacHatter1",
+  "homepage": "https://github.com/MacHatter1/bb-thread-reference#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MacHatter1/bb-thread-reference.git"
+  },
+  "bugs": {
+    "url": "https://github.com/MacHatter1/bb-thread-reference/issues"
+  },
+  "keywords": [
+    "bb",
+    "bb-plugin",
+    "thread",
+    "mention",
+    "drag-and-drop",
+    "context",
+    "ai-agents"
+  ],
   "type": "module",
   "engines": {
     "bb": ">=0.43",
-    "bbPluginSdk": ">=0.4.87"
+    "bbPluginSdk": ">=0.4.87",
+    "node": ">=22"
   },
   "bb": {
     "name": "BB Thread Reference",
@@ -19,7 +40,9 @@
     ]
   },
   "scripts": {
-    "test": "vitest run"
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest"
   },
   "dependencies": {},
   "devDependencies": {
